@@ -44,7 +44,6 @@ const Login = () => {
                 toast.success(res.data.message);
             }
         } catch (error) {
-
             toast.error(error.response.data.message);
         } finally {
             dispatch(setLoading(false));
@@ -89,14 +88,14 @@ const Login = () => {
                             animate={ { x: 0, opacity: 1 } }
                             transition={ { delay: 0.4 } }
                         >
-                            <Label htmlFor="email" className="block text-gray-200 text-lg">
+                            <Label htmlFor="email" className="block text-white text-lg">
                                 Email Address <span className="text-red-400">*</span>
                             </Label>
                             <Input
                                 id="email"
                                 placeholder="john.doe@gmail.com"
                                 type="email"
-                                className="mt-1 p-3 border bg-transparent border-gray-500 rounded-md outline-none focus:border-blue-500 transition-all w-full"
+                                className="mt-1 p-3 border bg-transparent border-gray-500 rounded-md outline-none focus:border-blue-500 transition-all w-full text-white placeholder-gray-400"
                                 value={ input.email }
                                 name="email"
                                 onChange={ changeEventHandler }
@@ -108,14 +107,14 @@ const Login = () => {
                             animate={ { x: 0, opacity: 1 } }
                             transition={ { delay: 0.5 } }
                         >
-                            <Label htmlFor="password" className="block text-gray-200 text-lg">
+                            <Label htmlFor="password" className="block text-white text-lg">
                                 Password <span className="text-red-400">*</span>
                             </Label>
                             <Input
                                 id="password"
                                 placeholder="********"
                                 type="password"
-                                className="mt-1 p-3 border bg-transparent border-gray-500 rounded-md outline-none focus:border-blue-500 transition-all w-full"
+                                className="mt-1 p-3 border bg-transparent border-gray-500 rounded-md outline-none focus:border-blue-500 transition-all w-full text-white placeholder-gray-400"
                                 value={ input.password }
                                 name="password"
                                 onChange={ changeEventHandler }
@@ -128,7 +127,7 @@ const Login = () => {
                             animate={ { x: 0, opacity: 1 } }
                             transition={ { delay: 0.6 } }
                         >
-                            <Label className="block text-gray-200 mb-2 text-lg">
+                            <Label className="block text-white mb-2 text-lg">
                                 I am a: <span className="text-red-400">*</span>
                             </Label>
                             <RadioGroup
@@ -142,11 +141,11 @@ const Login = () => {
                                         name="role"
                                         value="student"
                                         id="student"
-                                        className="cursor-pointer"
+                                        className="cursor-pointer accent-blue-500"
                                         checked={ input.role === 'student' }
                                         onChange={ changeEventHandler }
                                     />
-                                    <Label htmlFor="student" className="text-gray-200 cursor-pointer">
+                                    <Label htmlFor="student" className="text-white cursor-pointer">
                                         JobSeeker
                                     </Label>
                                 </div>
@@ -156,11 +155,11 @@ const Login = () => {
                                         name="role"
                                         value="recruiter"
                                         id="recruiter"
-                                        className="cursor-pointer"
+                                        className="cursor-pointer accent-blue-500"
                                         checked={ input.role === 'recruiter' }
                                         onChange={ changeEventHandler }
                                     />
-                                    <Label htmlFor="recruiter" className="text-gray-200 cursor-pointer">
+                                    <Label htmlFor="recruiter" className="text-white cursor-pointer">
                                         Recruiter
                                     </Label>
                                 </div>
@@ -168,7 +167,7 @@ const Login = () => {
                         </motion.div>
 
                         { loading ? (
-                            <Button className="w-full my-2 bg-blue-600 text-white">
+                            <Button className="w-full my-2 bg-blue-600 text-white hover:bg-blue-700">
                                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                                 Please wait...
                             </Button>
@@ -181,9 +180,9 @@ const Login = () => {
                             </Button>
                         ) }
 
-                        <p className="mt-4 text-center text-gray-200">
+                        <p className="mt-4 text-center text-white">
                             Don't have an account?
-                            <Link to="/signup" className="text-blue-500 mx-1">
+                            <Link to="/signup" className="text-blue-400 hover:text-blue-300 mx-1 transition-colors">
                                 Sign Up
                             </Link>
                         </p>
