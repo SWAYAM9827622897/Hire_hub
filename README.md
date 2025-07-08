@@ -6,17 +6,7 @@ A comprehensive job seeking and posting platform that connects job seekers with 
 - Frontend: [https://hire-hub-chandan.vercel.app](https://hire-hub-chandan.vercel.app)
 - Backend: [https://hire-hub-psi.vercel.app](https://hire-hub-psi.vercel.app)
 
-> **Important Note:** We're using free-tier servers which may need a warm-up:
-> 1. First open the backend URL and wait for it to load
-> 2. Then access the frontend URL for the best experience
-> 3. If experiencing delays, please refresh both URLs
-
-## ✨ Features
-
-### 👤 For Job Seekers
-- Account creation and management
-- Job search with advanced filtering
-- Save interesting job postings
+ings
 - Apply to jobs
 - Profile customization
 - Resume upload and management
